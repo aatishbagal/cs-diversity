@@ -1,0 +1,46 @@
+[debug] [2023-08-31T10:38:22.558Z] ----------------------------------------------------------------------
+[debug] [2023-08-31T10:38:22.560Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\aatis\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-08-31T10:38:22.560Z] CLI Version:   12.5.2
+[debug] [2023-08-31T10:38:22.560Z] Platform:      win32
+[debug] [2023-08-31T10:38:22.560Z] Node Version:  v18.12.1
+[debug] [2023-08-31T10:38:22.562Z] Time:          Thu Aug 31 2023 16:08:22 GMT+0530 (India Standard Time)
+[debug] [2023-08-31T10:38:22.562Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-31T10:38:22.636Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-31T10:38:22.637Z] > authorizing via signed-in user (aatishbagal135@gmail.com)
+[debug] [2023-08-31T10:38:22.637Z] [iam] checking project cs-proj-ai for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-08-31T10:38:22.640Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cs-proj-ai:testIamPermissions [none]
+[debug] [2023-08-31T10:38:22.640Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cs-proj-ai:testIamPermissions x-goog-quota-user=projects/cs-proj-ai
+[debug] [2023-08-31T10:38:22.640Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cs-proj-ai:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-08-31T10:38:24.220Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cs-proj-ai:testIamPermissions 200
+[debug] [2023-08-31T10:38:24.220Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cs-proj-ai:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-08-31T10:38:24.221Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs-proj-ai [none]
+[debug] [2023-08-31T10:38:24.666Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cs-proj-ai 200
+[debug] [2023-08-31T10:38:24.666Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cs-proj-ai {"projectId":"cs-proj-ai","projectNumber":"997485128858","displayName":"cs-proj-ai","name":"projects/cs-proj-ai","resources":{"hostingSite":"cs-proj-ai"},"state":"ACTIVE","etag":"1_4c8a8ace-886c-41a2-9b13-1808e1bae7b4"}
+[info] 
+[info] === Deploying to 'cs-proj-ai'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-08-31T10:38:24.672Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cs-proj-ai/versions [none]
+[debug] [2023-08-31T10:38:24.672Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cs-proj-ai/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-08-31T10:38:26.193Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cs-proj-ai/versions 200
+[debug] [2023-08-31T10:38:26.193Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cs-proj-ai/versions {"name":"projects/997485128858/sites/cs-proj-ai/versions/93058b25161aa418","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[cs-proj-ai]: beginning deploy... 
+[info] i  hosting[cs-proj-ai]: found 4 files in public 
+[debug] [2023-08-31T10:38:26.202Z] [hosting] uploading with 200 concurrency
+[debug] [2023-08-31T10:38:26.318Z] [hosting] hash cache [cHVibGlj] stored for 4 files
+[debug] [2023-08-31T10:38:26.319Z] [hosting][hash queue][FINAL] {"max":111,"min":4,"avg":43,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":115}
+[debug] [2023-08-31T10:38:26.319Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/997485128858/sites/cs-proj-ai/versions/93058b25161aa418:populateFiles [none]
+[debug] [2023-08-31T10:38:26.319Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/997485128858/sites/cs-proj-ai/versions/93058b25161aa418:populateFiles {"files":{"/style.css":"c37152b14d82c624bb5b259a1a29929cbd966f3b176dae04531f4953d12f6592","/index.html":"a9ef6609bd09397d7ac47960858366b15fe5e697c7fd9267937f691e96de81d3","/assets/cover.png":"2fbbe101f24be6aed38241d8dd4eeeaec22c894c322e16983b45b28eb397fa43","/assets/bg-vid.mp4":"8c7db774d35a6c4e9ff449db8897698a1b2c8a620c8456f620fcd2258f5029de"}}
+[debug] [2023-08-31T10:38:27.367Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/997485128858/sites/cs-proj-ai/versions/93058b25161aa418:populateFiles 200
+[debug] [2023-08-31T10:38:27.367Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/997485128858/sites/cs-proj-ai/versions/93058b25161aa418:populateFiles {"uploadRequiredHashes":["8c7db774d35a6c4e9ff449db8897698a1b2c8a620c8456f620fcd2258f5029de","c37152b14d82c624bb5b259a1a29929cbd966f3b176dae04531f4953d12f6592","a9ef6609bd09397d7ac47960858366b15fe5e697c7fd9267937f691e96de81d3","2fbbe101f24be6aed38241d8dd4eeeaec22c894c322e16983b45b28eb397fa43"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/cs-proj-ai/versions/93058b25161aa418/files"}
+[debug] [2023-08-31T10:38:27.368Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cs-proj-ai/versions/93058b25161aa418/files/8c7db774d35a6c4e9ff449db8897698a1b2c8a620c8456f620fcd2258f5029de [none]
+[debug] [2023-08-31T10:38:27.368Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cs-proj-ai/versions/93058b25161aa418/files/8c7db774d35a6c4e9ff449db8897698a1b2c8a620c8456f620fcd2258f5029de [stream]
+[debug] [2023-08-31T10:38:27.369Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cs-proj-ai/versions/93058b25161aa418/files/c37152b14d82c624bb5b259a1a29929cbd966f3b176dae04531f4953d12f6592 [none]
+[debug] [2023-08-31T10:38:27.369Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cs-proj-ai/versions/93058b25161aa418/files/c37152b14d82c624bb5b259a1a29929cbd966f3b176dae04531f4953d12f6592 [stream]
+[debug] [2023-08-31T10:38:27.370Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cs-proj-ai/versions/93058b25161aa418/files/a9ef6609bd09397d7ac47960858366b15fe5e697c7fd9267937f691e96de81d3 [none]
+[debug] [2023-08-31T10:38:27.370Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cs-proj-ai/versions/93058b25161aa418/files/a9ef6609bd09397d7ac47960858366b15fe5e697c7fd9267937f691e96de81d3 [stream]
+[debug] [2023-08-31T10:38:27.371Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cs-proj-ai/versions/93058b25161aa418/files/2fbbe101f24be6aed38241d8dd4eeeaec22c894c322e16983b45b28eb397fa43 [none]
+[debug] [2023-08-31T10:38:27.371Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cs-proj-ai/versions/93058b25161aa418/files/2fbbe101f24be6aed38241d8dd4eeeaec22c894c322e16983b45b28eb397fa43 [stream]
+[debug] [2023-08-31T10:38:27.372Z] [hosting][populate queue][FINAL] {"max":1051,"min":1051,"avg":1051,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1055}
+[debug] [2023-08-31T10:38:27.372Z] [hosting] uploads queued: 4
